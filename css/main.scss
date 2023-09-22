@@ -1,0 +1,209 @@
+$primary-color: white;
+$secondary-color: orange;
+
+:root {
+    box-sizing: border-box;
+    color: $primary-color;
+}
+
+*, ::before, ::after {
+    box-sizing: inherit;
+}
+
+body {
+    background-image: url('https://cdn.pixabay.com/photo/2017/04/05/01/20/wood-2203740_1280.jpg');
+}
+
+header {
+    background-color: black;
+    padding: 5px;
+    font-family: 'Cookie', cursive;
+    display: flex;
+    justify-content: space-between; 
+    border: 2px solid green;
+    border-bottom: none;
+    
+    
+}
+
+.logo {
+
+    img {
+        margin: 20px;
+        width: 60px;
+    }
+}
+
+.menu {
+
+    flex: 0 0 60%;  /*0-flex grow, 0-flex shrink, flex-basic*/
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;  
+
+    &-list {
+        li {
+            display: inline-block;  /*elementy będą koło siebie */
+            padding-right: 20px;
+
+            a {
+                color: $primary-color;
+                font-size: 1.5rem;
+                text-decoration: none;
+            }
+
+            a:hover {
+                color: $secondary-color;
+            }
+        }
+    }
+}
+
+.kontakt {
+    flex: 0 0 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+}
+
+.box {
+
+    height: 200px;
+    background-color: black;
+    display: flex;
+    position: relative;  /* aby ustawic img na absolute */
+    border: 2px solid red;
+    border-top: none;
+    
+
+    &-item {
+        width: 50%;
+        height: 100%;
+        font-family: cursive, geneva;
+        padding: 20px;
+        
+        &-button {
+            text-transform: uppercase;
+            padding: 20px 0px;
+            font-size: 0.8rem;
+            
+            &-order {
+                color: rgb(163, 214, 21);
+                background-color: rgb(110, 79, 10);
+                border: 2px solid rgb(163, 214, 21);
+                text-decoration: none;
+                padding: 5px;
+                margin-right: 10px;
+                
+            }
+            &-book {
+                color: $secondary-color;
+                background-color: rgb(110, 79, 10);
+                border: 2px solid $secondary-color;
+                text-decoration: none;
+                padding: 5px;
+            }
+
+            &-order:hover, &-book:hover {
+                background-color: rgb(39, 36, 36);
+            }
+        }
+    }
+
+   &-img {
+     
+    img {
+        width: 300px;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        max-height: 100%;
+        border: 2px solid $primary-color;
+        border-bottom: none;
+        border-right: none;
+        
+    }
+   }
+
+}
+
+.zalety {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+    margin: 10px;
+
+    &-img {
+        position: relative;
+        
+
+        &-opis {
+            position: absolute;
+            right: 20px;
+            bottom: 10px;
+        }
+
+       img {
+           border: 2px solid black;
+           width: 450px;
+           height: 180px;
+       }
+    }
+  }
+
+.kitchen-menu {
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: cursive;
+    padding: 20px;
+
+
+    &-one-forth {
+       
+        flex-basis: 25%; /* szerokość elementu */
+        text-align: center;
+        font-size: 0.9rem;
+        margin-bottom: 20px;
+
+        p {
+            padding-right: 5px;;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.page-footer {
+    width: 100%;
+    background-color: black;
+    font-family: Cookie, cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+         
+    ul {
+        display: flex;
+        gap: 100px;
+        text-decoration: dotted;
+        list-style: none;
+        flex-wrap: wrap;
+        li {
+           
+            a {
+                color: $primary-color;
+                font-size: 20px;
+                text-decoration: none;
+            }
+            a:hover {
+                color: $secondary-color;
+            }
+        }
+    }
+}
